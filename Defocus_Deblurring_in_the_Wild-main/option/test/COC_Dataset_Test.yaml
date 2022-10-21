@@ -1,0 +1,43 @@
+name: Learnable_BK
+use_tb_logger: false
+model: Learnable_BK # reconstruct Defocus network.
+
+# dataset:
+#   test:
+#     name: test
+#     dataroot: /home/zjc/dual_pixel/defocus-deblurring-dual-pixel-master/DPDNet/dd_dp_dataset_canon_patch
+#     batch_size: 1
+#     workers: 1
+#     left_name: train_l/source
+#     right_name: train_r/source
+#     combine_name: train_c/target
+#     blur_name: /home/zjc/dual_pixel/defocus-deblurring-dual-pixel-master/DPDNet/dd_dp_dataset_canon_patch/val_b/source
+dataset:
+  test:
+    name: test
+    dataroot: /home/zjc/DataSet/dd_dp_dataset_canon/
+    batch_size: 1
+    workers: 1
+    left_name: val_l/source
+    right_name: val_r/source
+    combine_name: val_c/target
+    blur_name: /home/zjc/dual_pixel/defocus-deblurring-dual-pixel-master/DPDNet/dd_dp_dataset_canon_patch/val_b/source
+    datarootDC: /home/zjc/dual_pixel/DECONVOLUTION/outputGAN/
+    recover_name: DPDDOoF
+    AoF_name: DPDDAoF
+
+network_G:
+  in_nc: 3
+  block_num: 2
+  init: xavier
+  hidden_channels: 128
+  K: 4
+
+path:
+  pretrain_model_G: ~
+  strict_load: true
+  resume_state: /home/zjc/dual_pixel/Defocus_Deblurring_in_the_Wild-main/experiments/pretrain_model_for_learnable_blur_kernel/25_models.pth
+
+logger:
+  print_freq: 10
+  save_checkpoint_freq: 20 #!!float 5e3

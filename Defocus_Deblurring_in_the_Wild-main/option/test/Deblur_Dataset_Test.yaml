@@ -1,0 +1,65 @@
+name: DefocusGAN_90
+use_tb_logger: false
+model: DefocusGAN # reconstruct Defocus network.
+
+
+dataset:
+  test: #DPDD
+    name: test
+    dataroot:  /home/zjc/DataSet/dd_dp_dataset_canon/ #~/Documents/deblur/dd_dp_dataset_validation_inputs_only #
+    batch_size: 1
+    workers: 1
+    left_name: test_l/source
+    right_name: test_r/source
+    combine_name: test_c/target
+    combine_source_name: test_c/source
+
+  # test: #ROF
+  #   name: test
+  #   dataroot:  /home/zjc/DataSet/RealDOF/
+  #   batch_size: 1
+  #   workers: 1
+  #   combine_name: target
+  #   combine_source_name: source
+  
+  # test: #CUHK
+  #   name: CUHK
+  #   dataroot:  /home/zjc/DataSet/CUHK/
+  #   batch_size: 1
+  #   workers: 1
+  #   combine_source_name: source
+    
+
+  # test: #PixelDP
+  #   name: PixelDP
+  #   dataroot:  /home/zjc/DataSet/PixelDP/
+  #   batch_size: 1
+  #   workers: 1
+  #   combine_source_name: test_c
+  
+
+  val:
+    name: val
+    dataroot: /home/zjc/DataSet/dd_dp_dataset_canon/
+    batch_size: 1
+    workers: 1
+    left_name: val_l/source
+    right_name: val_r/source
+    combine_name: val_c/target
+    combine_source_name: val_c/source
+    blur_name: val_Gb/source
+
+network_G:
+  in_nc: 3
+  block_num: 2
+  init: xavier
+  hidden_channels: 128
+  K: 4
+
+path:
+  pretrain_model_G: ~
+  strict_load: false
+  resume_state: /home/zjc/dual_pixel/Defocus_Deblurring_in_the_Wild-main/experiments/pretrain_model_for_DefocusGAN/90_models.pth
+logger:
+  print_freq: 10
+  save_checkpoint_freq: 20 #!!float 5e3
