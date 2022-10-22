@@ -13,3 +13,4 @@ After downloading the file, put the models in experiments\pretrain_model_for_Def
 
 experiments\pretrain_model_for_learnable_blur_kernel
 
+Modify \option\test\Deblur_Dataset_Test.yaml for your dataset.
