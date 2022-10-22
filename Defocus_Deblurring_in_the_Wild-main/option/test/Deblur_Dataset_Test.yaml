@@ -4,9 +4,9 @@ model: DefocusGAN # reconstruct Defocus network.
 
 
 dataset:
-  test: #DPDD
+  test: #DPDD     ###for your dataset
     name: test
-    dataroot:  /home/zjc/DataSet/dd_dp_dataset_canon/ #~/Documents/deblur/dd_dp_dataset_validation_inputs_only #
+    dataroot:  /home/zjc/DataSet/dd_dp_dataset_canon/ #~/Documents/deblur/dd_dp_dataset_validation_inputs_only #      
     batch_size: 1
     workers: 1
     left_name: test_l/source
