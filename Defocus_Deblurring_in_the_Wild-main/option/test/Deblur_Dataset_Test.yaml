@@ -14,13 +14,6 @@ dataset:
     combine_name: test_c/target
     combine_source_name: test_c/source
 
-  # test: #ROF
-  #   name: test
-  #   dataroot:  /home/zjc/DataSet/RealDOF/
-  #   batch_size: 1
-  #   workers: 1
-  #   combine_name: target
-  #   combine_source_name: source
   
   # test: #CUHK
   #   name: CUHK
