@@ -1,5 +1,5 @@
 # DefocusGAN
-Learnable Blur Kernel for Single-Image Defocus Deblurring in the Wild
+Learnable Blur Kernel for Single-Image Defocus Deblurring in the Wild (we has been accepted by AAAI2023, submission 4052)
 
 This is the github space of DefocusGAN.
 
