@@ -21,3 +21,4 @@ Run test_final.py.
 for training, modify \option\test\Defocus_GAN_Trained.yaml for your dataset.
 First use blur_kernel_test.py to generate defocus map.
 And then you can use train_final.py for training.
+
