@@ -9,7 +9,7 @@ The link to the pre-trained model of DefocusGAN is: https://drive.google.com/fil
 
 The link for unsupervised estimation of the defocus map is: https://drive.google.com/file/d/1qUtrV7dvzoBZTfS3cQqeLaSytF9PasN-/view?usp=sharing
 
-The link for blur kernel is:https://drive.google.com/open?id=12YOOIuREklil0UuR28CXHhxfm2Il9Xlt&usp=drive_fs
+The link for blur kernel is:https://drive.google.com/file/d/12YOOIuREklil0UuR28CXHhxfm2Il9Xlt/view?usp=sharing
 
 After downloading the file, put the models in 
 
